@@ -11,7 +11,7 @@ export const CommandExplorer: React.FC<CommandExplorerProps> = ({ commands }) =>
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const categories = ['All', 'General', 'Moderation', 'Music', 'AI & Fun', 'Utility'];
+  const categories = ['All', ...Array.from(new Set(commands.map((c) => c.category)))];
 
   const filteredCommands = commands.filter((cmd) => {
     const matchesCat = activeCategory === 'All' || cmd.category === activeCategory;

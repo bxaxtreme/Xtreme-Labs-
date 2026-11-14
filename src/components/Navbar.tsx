@@ -16,7 +16,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   suiteName,
   theme,
   onToggleTheme,
-  supportServerUrl = 'https://discord.gg/anurag-bots'
+  supportServerUrl = ''
 }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [botsDropdownOpen, setBotsDropdownOpen] = useState(false);
@@ -159,19 +159,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                 Guide
               </Link>
             </li>
-            <li>
-              <Link
-                href="/status"
-                className={`nav-link ${isActive('/status') ? 'active' : ''}`}
-                onClick={() => setMobileOpen(false)}
-              >
-                <span className="nav-status-indicator" />
-                Status
-              </Link>
-            </li>
 
             {/* Mobile Drawer Support Link */}
-            <li className="mobile-only-nav-item">
+            {supportServerUrl && (
+              <li className="mobile-only-nav-item">
               <a
                 href={supportServerUrl}
                 target="_blank"
@@ -182,6 +173,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 Official Support Server ↗
               </a>
             </li>
+            )}
           </ul>
 
           <div className="nav-actions">

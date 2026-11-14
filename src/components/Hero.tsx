@@ -3,11 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { AnuragLabsLogo } from '@/components/AnuragLabsLogo';
-import { ecosystemInfo, initialBotsList } from '@/config/botsData';
+import { ecosystemInfo, initialBotsList, allFleetCommands } from '@/config/botsData';
 
 interface HeroProps {
   totalBotsCount: number;
-  supportServerUrl: string;
+  supportServerUrl?: string;
 }
 
 export const Hero: React.FC<HeroProps> = ({ totalBotsCount, supportServerUrl }) => {
@@ -92,8 +92,8 @@ export const Hero: React.FC<HeroProps> = ({ totalBotsCount, supportServerUrl }) 
             <span className="stat-label">Total Members</span>
           </div>
           <div className="stat-item">
-            <span className="stat-value">{ecosystemInfo.stats.uptime}</span>
-            <span className="stat-label">Uptime Guarantee</span>
+            <span className="stat-value">{allFleetCommands.length}</span>
+            <span className="stat-label">Documented Commands</span>
           </div>
         </div>
       </div>

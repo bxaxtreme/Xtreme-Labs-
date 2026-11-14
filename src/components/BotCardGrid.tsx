@@ -199,8 +199,8 @@ export function BotCardGrid({
                         <span className="bot-stat-lbl">Users</span>
                       </div>
                       <div className="bot-stat-item">
-                        <span className="bot-stat-val">{bot.stats.uptime}</span>
-                        <span className="bot-stat-lbl">Uptime</span>
+                        <span className="bot-stat-val">{bot.detailedCommands?.length ?? bot.topCommands.length}</span>
+                        <span className="bot-stat-lbl">Commands</span>
                       </div>
                     </div>
 

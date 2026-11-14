@@ -33,7 +33,7 @@ const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       id: 'tourney-u1',
       sender: 'user',
       name: 'ServerOwner',
-      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80',
+      avatar: '/images/avatars/member-1.svg',
       time: 'Today at 10:30 PM',
       text: '/tourney create name: "Championship Cup 2026" slots: 25 format: "Battle Royale Squads"'
     },
@@ -41,7 +41,7 @@ const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       id: 'tourney-b1',
       sender: 'bot',
       name: 'Quotient Prime',
-      avatar: '/images/quotient-prime.jpg',
+      avatar: '/images/quotient-prime.webp',
       isBot: true,
       time: 'Today at 10:30 PM',
       embed: {
@@ -64,7 +64,7 @@ const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       id: 'shizuka-u1',
       sender: 'user',
       name: 'ServerOwner',
-      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80',
+      avatar: '/images/avatars/member-1.svg',
       time: 'Today at 10:32 PM',
       text: '/automod shield'
     },
@@ -72,7 +72,7 @@ const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       id: 'shizuka-b1',
       sender: 'bot',
       name: 'Shizuka !!',
-      avatar: '/images/shizuka.jpg',
+      avatar: '/images/shizuka.webp',
       isBot: true,
       time: 'Today at 10:32 PM',
       embed: {
@@ -95,7 +95,7 @@ const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       id: 'ultra-u1',
       sender: 'user',
       name: 'ServerOwner',
-      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80',
+      avatar: '/images/avatars/member-1.svg',
       time: 'Today at 10:34 PM',
       text: '/play Alan Walker - Faded (320kbps Remaster)'
     },
@@ -103,7 +103,7 @@ const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       id: 'ultra-b1',
       sender: 'bot',
       name: 'Sonic',
-      avatar: '/images/sonic.png',
+      avatar: '/images/sonic.webp',
       isBot: true,
       time: 'Today at 10:34 PM',
       embed: {
@@ -177,8 +177,7 @@ const BOT_PRESET_RESPONSES: Record<string, Record<string, SampleEmbed>> = {
       title: '🌸 Shizuka !! • Command Dashboard',
       description: 'Kon\'nichiwa! Here is your complete companion guide for **Shizuka !!**.\n\n🛡️ **Moderation:** `/automod`, `/ban`, `/kick`, `/timeout`, `/purge`\n🎉 **Community:** `/welcome`, `/rank`, `/leaderboard`, `/roles`\n✨ **Anime & Fun:** `/anime`, `/kiss`, `/pat`, `/hug`, `/quote`',
       fields: [
-        { name: 'Prefix', value: 'Slash (`/`)', inline: true },
-        { name: 'Support', value: '[Join Community](https://discord.gg/anurag-bots)', inline: true }
+        { name: 'Prefix', value: 'Slash (`/`)', inline: true }
       ],
       footer: 'Shizuka !! • Your Aesthetic Discord Partner'
     },
@@ -286,7 +285,7 @@ export const DiscordSimulator: React.FC<DiscordSimulatorProps> = ({
       id: `user-${Date.now()}`,
       sender: 'user',
       name: 'ServerOwner',
-      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80',
+      avatar: '/images/avatars/member-1.svg',
       time: 'Just now',
       text: trimmed
     };

@@ -1,4 +1,5 @@
 import { DiscordBotItem, CommandItem } from '@/types/bot';
+import { siteConfig } from '@/config/site';
 
 export const initialBotsList: DiscordBotItem[] = [
   {
@@ -7,15 +8,13 @@ export const initialBotsList: DiscordBotItem[] = [
     tagline: "Automated Esports, Scrims & Tournament System",
     description: "Professional tournament automation for competitive Discord servers. Instant scrim slot registration, bracket generation, team verification, and match scoreboards with zero manual hassle.",
     longDescription: "Quotient Prime is the ultimate tournament orchestrator engineered for gaming communities, clan organizers, and esports leagues. Say goodbye to manual slot tracking in spreadsheets — manage brackets, team tags, scrim IDs, and automated points tables seamlessly with slash commands.",
-    avatar: "/images/quotient-prime.jpg",
+    avatar: "/images/quotient-prime.webp",
     accentColor: "#19E6B0",
     category: "Tournaments",
     inviteUrl: "https://discord.com/oauth2/authorize?client_id=1530927172531916800",
-    supportServerUrl: "https://discord.gg/anurag-bots",
     stats: {
       servers: "40+",
-      users: "30,000+",
-      uptime: "99.98%"
+      users: "30,000+"
     },
     tags: ["Tournaments", "Scrims", "Brackets", "Esports", "Slots"],
     featured: true,
@@ -110,15 +109,13 @@ export const initialBotsList: DiscordBotItem[] = [
     tagline: "Supreme Auto-Moderation, Anime & Community Hub",
     description: "Your all-in-one server companion. Featuring smart anti-raid protection, custom welcomer cards, role leveling, community economy, and engaging anime interactions.",
     longDescription: "Shizuka !! is a full-featured community guardian and entertainment powerhouse. Designed to protect server safety while creating a fun, vibrant atmosphere with customizable anime cards, automated moderation, interactive role levels, and expressive roleplay commands.",
-    avatar: "/images/shizuka.jpg",
+    avatar: "/images/shizuka.webp",
     accentColor: "#EB459E",
     category: "Community",
     inviteUrl: "https://discord.com/oauth2/authorize?client_id=1536403248792207470",
-    supportServerUrl: "https://discord.gg/anurag-bots",
     stats: {
       servers: "40+",
-      users: "40,000+",
-      uptime: "99.99%"
+      users: "40,000+"
     },
     tags: ["AutoMod", "Anime", "Welcomer", "Leveling", "Security"],
     featured: true,
@@ -213,15 +210,13 @@ export const initialBotsList: DiscordBotItem[] = [
     tagline: "Lossless 320kbps High-Fi Audio & 24/7 Radio",
     description: "Crystal clear studio sound streaming straight into your voice channels. Supports YouTube, Spotify, SoundCloud, 24/7 radio mode, bassboost, 8D audio, and zero audio stutter.",
     longDescription: "Sonic delivers high-definition, audiophile-grade sound straight into your Discord voice channels. Built on dedicated high-bandwidth audio nodes, it offers instantaneous track playback, multi-platform queue management, and advanced real-time digital signal processing.",
-    avatar: "/images/sonic.png",
+    avatar: "/images/sonic.webp",
     accentColor: "#3B9EFF",
     category: "Music",
     inviteUrl: "https://discord.com/oauth2/authorize?client_id=1536757672899252355",
-    supportServerUrl: "https://discord.gg/anurag-bots",
     stats: {
       servers: "20+",
-      users: "20,000+",
-      uptime: "99.99%"
+      users: "20,000+"
     },
     tags: ["320kbps Audio", "24/7 Radio", "Bassboost", "No Lag", "Spotify"],
     featured: true,
@@ -321,12 +316,11 @@ export const ecosystemInfo = {
   name: "Xtreme Labs",
   headline: "Empower Your Discord Server With Xtreme Labs",
   subheadline: "Direct 1-click invite links for Quotient Prime, Shizuka !!, and Sonic. Battle-tested Discord bots engineered by Xtreme Labs for esports tournaments, community moderation, and lossless 24/7 audio.",
-  supportServerUrl: "https://discord.gg/anurag-bots",
-  githubUrl: "https://github.com/anurag/discord-bots",
+  supportServerUrl: siteConfig.supportServerUrl,
+  githubUrl: siteConfig.githubUrl,
   stats: {
     totalBots: "3",
     totalServers: "100+",
-    totalUsers: "90,000+",
-    uptime: "99.99%"
+    totalUsers: "90,000+"
   }
 };

@@ -1,17 +1,9 @@
-export interface PermissionItem {
-  id: string;
-  name: string;
-  category: 'General' | 'Text' | 'Voice';
-  bit: number;
-  danger?: boolean;
-  desc: string;
-}
-
 export interface FeatureItem {
   id: string;
   title: string;
   description: string;
   badge: string;
+  icon?: string;
 }
 
 export interface EmbedField {
@@ -42,7 +34,6 @@ export interface BotStats {
   servers: string;
   users: string;
   commandsRun?: string;
-  uptime: string;
 }
 
 export type BotCategory = 'All' | 'Tournaments' | 'Community' | 'Music';
@@ -74,20 +65,3 @@ export interface DiscordBotItem {
   detailedCommands?: CommandItem[];
 }
 
-export interface BotConfig {
-  clientId: string;
-  name: string;
-  tagline: string;
-  avatar: string;
-  accentColor: string;
-  version: string;
-  supportServerUrl: string;
-  githubUrl: string;
-  docsUrl: string;
-  stats: BotStats;
-  defaultScopes: string[];
-  features: FeatureItem[];
-  permissionsList: PermissionItem[];
-  presets: Record<string, string[]>;
-  commands: CommandItem[];
-}

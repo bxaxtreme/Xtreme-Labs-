@@ -10,8 +10,8 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({
   suiteName,
-  supportServerUrl = 'https://discord.gg/anurag-bots',
-  githubUrl = 'https://github.com/anurag/discord-bots'
+  supportServerUrl = '',
+  githubUrl = ''
 }) => {
   const currentYear = new Date().getFullYear();
 
@@ -51,7 +51,6 @@ export const Footer: React.FC<FooterProps> = ({
               <li><Link href="/commands" className="footer-link">Slash Commands Suite</Link></li>
               <li><Link href="/playground" className="footer-link">Discord Live Studio</Link></li>
               <li><Link href="/guide" className="footer-link">Setup & Role Guide</Link></li>
-              <li><Link href="/status" className="footer-link">Live System Status</Link></li>
             </ul>
           </div>
 

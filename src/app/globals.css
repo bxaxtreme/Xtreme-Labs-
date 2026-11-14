@@ -6555,13 +6555,11 @@ html, body {
   object-fit: cover;
   object-position: top center;
   opacity: 0;
-  transform: scale(1.03);
-  transition: opacity 0.7s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.7s ease;
 }
 
 .wp-slide.is-active {
   opacity: 1;
-  transform: scale(1);
 }
 
 .wp-dots {
@@ -6778,9 +6776,6 @@ html, body {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  /* Slow cinematic zoom on the visible slide */
-  .wp-slide.is-active { animation: wpKenBurns 6s ease-out forwards; }
-
   /* Rotating accent glow around the preview */
   .wp-preview::before {
     content: "";
@@ -6853,3 +6848,22 @@ html, body {
 }
 
 .wp-dots { z-index: 3; }
+
+/* 404 page */
+.nf-page { min-height: 100vh; display: flex; align-items: center; padding: 4rem 0; }
+.nf-inner { text-align: center; max-width: 640px; }
+.nf-code {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: clamp(4rem, 16vw, 8rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--blurple);
+  margin-bottom: 1rem;
+}
+.nf-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; color: var(--text-primary); margin-bottom: 0.75rem; }
+.nf-text { color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.75rem; }
+.nf-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 1.75rem; }
+.nf-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; justify-content: center; list-style: none; padding: 0; margin: 0; }
+.nf-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; }
+.nf-links a:hover { color: var(--blurple); text-decoration: underline; }

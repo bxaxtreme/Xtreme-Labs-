@@ -1,64 +1,38 @@
-# 🔬 Xtreme Labs • Discord Bot Suite
+# Xtreme Labs
 
-> High-performance Discord bots engineered for esports tournaments, automated community moderation, and lossless 24/7 audio streaming.
+Official website for the Xtreme Labs Discord bots (Quotient Prime, Shizuka and Sonic) and web projects.
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=flat&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19-blue?style=flat&logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
-[![Status](https://img.shields.io/badge/Uptime-99.99%25-success)](https://discord.gg/anurag-bots)
+## Bots
 
----
+| Bot | Focus | Invite |
+| :--- | :--- | :--- |
+| Quotient Prime | Esports scrims and tournaments | [Add Quotient Prime](https://discord.com/oauth2/authorize?client_id=1530927172531916800) |
+| Shizuka | Community and moderation | [Add Shizuka](https://discord.com/oauth2/authorize?client_id=1536403248792207470) |
+| Sonic | Music and 24/7 voice | [Add Sonic](https://discord.com/oauth2/authorize?client_id=1536757672899252355) |
 
-## ⚡ Verified Fleet
-
-| Bot | Category | Description | 1-Click Invite |
-| :--- | :--- | :--- | :--- |
-| **Quotient Prime** | 🏆 Esports & Scrims | Automated scrim matchmaking, bracket generation, and auto slot reservation. | [Add Quotient Prime](https://discord.com/oauth2/authorize?client_id=1530927172531916800) |
-| **Shizuka !!** | 🌸 Community & Mod | Heuristic anti-raid security, dynamic leveling, XP cards, and welcome canvas. | [Add Shizuka](https://discord.com/oauth2/authorize?client_id=1536403248792207470) |
-| **Sonic** | 🎵 High-Fi Audio | Studio-grade 320kbps lossless streaming, zero-latency queues, and 24/7 voice channel persistence. | [Add Sonic](https://discord.com/oauth2/authorize?client_id=1536757672899252355) |
-
----
-
-## 🛠️ Features
-
-* **Interactive Discord Studio**: Live in-browser simulated Discord client with interactive slash commands and guild switching.
-* **Master Slash Commands Directory**: Searchable, filterable catalog of all fleet commands with syntax and permissions.
-* **Real-time Infrastructure Telemetry**: Shard latency metrics, cluster ping, and incident reporting.
-* **Comprehensive Role & Hierarchy Guide**: Visual role-order drag & drop hierarchy guide for Discord permissions.
-* **Dual Themes**: Handcrafted Porcelain Light and Midnight Dark modes with persistent storage.
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18.18+ or 20+
-- npm or pnpm
-
-### Installation
+## Getting started
 
 ```bash
-git clone https://github.com/ubosachin/Xtreme Labs.git
-cd Xtreme Labs
 npm install
-```
-
-### Running Locally
-
-```bash
 npm run dev
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the portal.
+## Configuration
 
-### Building for Production
+Set these in your hosting dashboard (or a local `.env.local`):
 
-```bash
-npm run build
-npm start
-```
+| Variable | Purpose |
+| :--- | :--- |
+| `NEXT_PUBLIC_SITE_URL` | Your custom domain, for example `https://yourdomain.com`. Used for canonical tags, sitemap, robots and share images. |
+| `NEXT_PUBLIC_SUPPORT_SERVER_URL` | Real Discord support invite. Support buttons stay hidden until this is set. |
 
----
+Other settings live in `src/config/site.ts`. Fill `localBusiness` there with a real address to publish LocalBusiness structured data.
 
-## 📄 License
-MIT © [Xtreme Labs](https://github.com/ubosachin/Xtreme Labs)
+## SEO files
+
+Generated automatically: `/sitemap.xml`, `/robots.txt`, `/llms.txt`, `/manifest.webmanifest`, per-page titles, descriptions, canonical tags, Open Graph and Twitter images, and JSON-LD.
+
+## Stack
+
+Next.js, React and TypeScript. Share images live in `public/og`.

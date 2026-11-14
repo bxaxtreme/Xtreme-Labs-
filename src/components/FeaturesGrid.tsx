@@ -69,7 +69,7 @@ export const FeaturesGrid: React.FC<FeaturesGridProps> = ({ features }) => {
         <div className="features-grid">
           {features.map((feat) => (
             <div key={feat.id} className="feature-card">
-              <div className="feature-icon-wrap">{getFeatureIcon(feat.id)}</div>
+              <div className="feature-icon-wrap">{getFeatureIcon(feat.icon ?? feat.id)}</div>
               <span className="feature-badge">{feat.badge}</span>
               <h3 className="feature-title">{feat.title}</h3>
               <p className="feature-desc">{feat.description}</p>

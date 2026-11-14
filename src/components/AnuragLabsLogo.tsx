@@ -20,7 +20,7 @@ export const AnuragLabsLogo: React.FC<AnuragLabsLogoProps> = ({
     >
       {useImage ? (
         <img
-          src="/images/anuraglabs-logo.jpg"
+          src="/images/xtreme-labs-logo.webp"
           alt="Xtreme Labs Emblem"
           className="anuraglabs-logo-img"
           style={{
