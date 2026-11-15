@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import { siteConfig, SITE_URL } from '@/config/site';
 import { organizationLd, websiteLd } from '@/lib/seo';
 import { JsonLd } from '@/components/JsonLd';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 const jakarta = Plus_Jakarta_Sans({
@@ -52,13 +53,19 @@ export const metadata: Metadata = {
   },
 };
 
+// Runs before first paint so a saved dark theme does not flash light.
+const themeInitScript = `(function(){try{var t=localStorage.getItem('anurag_bot_theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){}})();`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${mono.variable}`}>
+    <html lang="en" className={`${jakarta.variable} ${mono.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body>
         <JsonLd data={organizationLd()} />
         <JsonLd data={websiteLd()} />
@@ -66,6 +73,7 @@ export default function RootLayout({
         <div className="ambient-glow ambient-glow-2" aria-hidden="true" />
         <div className="ambient-glow ambient-glow-3" aria-hidden="true" />
         {children}
+        <Analytics />
       </body>
     </html>
   );

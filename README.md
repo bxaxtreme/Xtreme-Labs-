@@ -29,6 +29,10 @@ Set these in your hosting dashboard (or a local `.env.local`):
 
 Other settings live in `src/config/site.ts`. Fill `localBusiness` there with a real address to publish LocalBusiness structured data.
 
+## Analytics
+
+Vercel Web Analytics is added in `src/app/layout.tsx`. Turn it on once in Vercel: Project -> Analytics -> Enable, then redeploy.
+
 ## SEO files
 
 Generated automatically: `/sitemap.xml`, `/robots.txt`, `/llms.txt`, `/manifest.webmanifest`, per-page titles, descriptions, canonical tags, Open Graph and Twitter images, and JSON-LD.

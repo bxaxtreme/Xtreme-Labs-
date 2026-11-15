@@ -33,7 +33,7 @@ export default function CommandsClient() {
   useEffect(() => {
     try {
       const savedTheme = localStorage.getItem('anurag_bot_theme') as 'light' | 'dark' | null;
-      if (savedTheme) {
+      if (savedTheme === 'light' || savedTheme === 'dark') {
         setTheme(savedTheme);
         document.documentElement.setAttribute('data-theme', savedTheme);
       } else {

@@ -10,7 +10,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 # Hallmark Design System (Anti-AI-Slop)
 
-Whenever designing, building, redesigning, or auditing UI components, pages, or landing experiences, ALWAYS load and follow the Hallmark skill at [.agents/skills/hallmark/SKILL.md](file:///Users/sachin/Desktop/bot-by-anurag/.agents/skills/hallmark/SKILL.md):
+Whenever designing, building, redesigning, or auditing UI components, pages, or landing experiences, ALWAYS load and follow the Hallmark skill at [.agents/skills/hallmark/SKILL.md](.agents/skills/hallmark/SKILL.md):
 - **Structural Variety**: Avoid predictable hero -> 3 cards -> CTA templates. Each page must have bespoke rhythm and macrostructural variety tailored to the domain.
 - **Pre-emit Self-Critique**: Score outputs across Philosophy, Hierarchy, Execution, Specificity, Restraint, Variety.
 - **Honest Copy**: Zero fabricated metrics or synthetic proof bars. Use honest domain-specific copy.
